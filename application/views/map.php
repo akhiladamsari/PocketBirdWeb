@@ -180,18 +180,44 @@
                                         foreach ($mapdata as $data) {
                                             $lat = $data->latitude;
                                             $lng = $data->longitude;
-                                            echo "addMarker($lat, $lng);\n";
+                                            $id = $data->note_ID;
+                                            echo "addMarker($lat, $lng, $id);\n";
                                         }
                                     ?>
+                                
+                               
                             }
                             
                             function addMarker(lat, lng) {
+                                
                                 var pos = new google.maps.LatLng(lat,lng);
                                 var marker = new google.maps.Marker({
                                     position: pos,
                                     map: map
                                 });
+                                
+                                 google.maps.event.addListener(marker,'click',function() {
+                                     
+                                     
+                                 
+                                    <?php
+                                        foreach ($mapdata as $data) {
+                                            if($data->note_ID == 9){
+                                                $print = $data->latitude;
+                                                break;
+                                            }
+                                        }
+                                    ?>
+                                     
+                                     
+                                    var infowindow = new google.maps.InfoWindow({
+                                      content:"<?php echo $print ?>"
+                                     });
+                                    infowindow.open(map,marker);
+                                });
                             }
+                            
+                            
                         </script>
                     </div>
 
