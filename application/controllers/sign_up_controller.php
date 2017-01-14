@@ -66,7 +66,8 @@ class sign_up_controller extends CI_Controller
                 $this->load->view('home');
             }
         } else {
-            $this->load->view('login');
+            $this->errordata['message'] = 'Your Username and Password are mismatch!';
+            $this->load->view('login',$this->errordata);
         }
     }
 
