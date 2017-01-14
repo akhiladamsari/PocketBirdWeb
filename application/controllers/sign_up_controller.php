@@ -56,9 +56,15 @@ class sign_up_controller extends CI_Controller
                 'username' => $this->input->post('username'),
                 'logged_in' => TRUE
             );
-            $this->session->set_userdata($newdata);
 
-            $this->load->view('home');
+            $resultactive = $this->users_model->check_active($username,$password);
+            $newdata['active']=TRUE;
+            $this->session->set_userdata($newdata);
+            if($resultactive == TRUE){
+                $this->select_new_users();
+            }else {
+                $this->load->view('home');
+            }
         } else {
             $this->load->view('login');
         }
@@ -70,7 +76,7 @@ class sign_up_controller extends CI_Controller
         $this->session->sess_destroy();
         $this->load->view('home');
     }
-    public function adminlogin()
+  /*  public function adminlogin()
     {
         //$result = new sign_up_controller().count_users();
         $result=$this->count_new_users();
@@ -103,7 +109,7 @@ class sign_up_controller extends CI_Controller
         return $data;
     }
 
-
+*/
 
     public function count_new_users(){
         $this->load->model('users_model');
@@ -132,7 +138,7 @@ class sign_up_controller extends CI_Controller
     public function select_new_users()
     {
         //$da = $this->adminlogin();
-        if ($this->session->has_userdata('username')) {
+        if ($this->session->has_userdata('username') && ($this->session->userdata['active']==1)) {
             $result = $this->count_new_users();
             $result2 = $this->count_new_comments();
             $result3 = $this->count_new_lognotes();
@@ -171,7 +177,7 @@ class sign_up_controller extends CI_Controller
     public function remove_user()
     {
         //$da = $this->adminlogin();
-        if ($this->session->has_userdata('username')) {
+        if ($this->session->has_userdata('username') && ($this->session->userdata['active']==1)) {
 
             $this->load->model('users_model');
             $data['userdetail']=NULL;
@@ -195,7 +201,7 @@ class sign_up_controller extends CI_Controller
     public function select_new_comment()
     {
         //$da = $this->adminlogin();
-        if ($this->session->has_userdata('username')) {
+        if ($this->session->has_userdata('username') && ($this->session->userdata['active']==1)) {
             $result = $this->count_new_users();
             $result2 = $this->count_new_comments();
             $result3 = $this->count_new_lognotes();
@@ -236,7 +242,7 @@ class sign_up_controller extends CI_Controller
     public function select_new_complains()
     {
         //$da = $this->adminlogin();
-        if ($this->session->has_userdata('username')) {
+        if ($this->session->has_userdata('username') && ($this->session->userdata['active']==1)) {
             $result = $this->count_new_users();
             $result2 = $this->count_new_comments();
             $result3 = $this->count_new_lognotes();
