@@ -147,8 +147,6 @@
                     </select> 
                     <button type="submit">SEARCH</button>
                  </form> 
-                
-                
                             
                             <!-- Intro / Why Us? -->
                 <div class="row">
@@ -176,20 +174,35 @@
                                     zoom: 7
                                 });
                                 
+                                
+                                
                                    <?php 
                                         foreach ($mapdata as $data) {
                                             $lat = $data->latitude;
                                             $lng = $data->longitude;
-                                            echo "addMarker($lat, $lng);\n";
+                                            $desc = "<img src='".base_url()."/shape/" . $data->shape . ".jpg' height=64 width=64><br>";
+                                            $desc .= "Village: " . $data->village . "<br/>";
+                                            $desc .= "Nearest city: " . $data->nearest_city . "<br/>";
+                                            $desc .= "Looks like: " . $data->looks_like . "<br/>";
+//                                            $desc .= "Colors: " . $data->colors . "<br />";
+                                            $desc .= "Behaviour: " . $data->behaviour . "<br />";
+                                            $desc .= "Description: " . $data->Description;
+                                            echo "addMarker($lat, $lng, \"$desc\");\n";
                                         }
                                     ?>
                             }
                             
-                            function addMarker(lat, lng) {
+                            function addMarker(lat, lng, desc) {
                                 var pos = new google.maps.LatLng(lat,lng);
                                 var marker = new google.maps.Marker({
                                     position: pos,
                                     map: map
+                                });
+                                google.maps.event.addListener(marker,'click',function() {
+                                    var infowindow = new google.maps.InfoWindow({
+                                      content:desc
+                                    });
+                                    infowindow.open(map,marker);
                                 });
                             }
                         </script>
@@ -203,7 +216,6 @@
                     <hr class="margin-top-3	0">
              
                     <hr>
->>>>>>> 92b8a5ba48b3fbbbfa06accceea872ab14496fc8
                 </div>
             </div>
         </div>
