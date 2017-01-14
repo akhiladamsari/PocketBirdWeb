@@ -83,11 +83,20 @@
                         <li>
                             <a href="<?php echo base_url(); ?>page_nav_controller/goto_contact" class="fa-comment ">Contact Us</a>
                         </li>
-                        <div class="login btn padding-horiz-20">
-                            <button type="button" class="btn btn-success btn-sm"><a href="<?php echo base_url(); ?>page_nav_controller/goto_login">Log In</a></button>
-                            <button type="button" class="btn btn-success btn-sm"><a href="<?php echo base_url(); ?>page_nav_controller/goto_signup">Sign Up</a></button>
+                        <?php if ($this->session->has_userdata('username')) { ?>
+                            <div class="login btn padding-horiz-20">
+                                <p><?php echo $this->session->userdata('username') ?></p>
+                                <button type="button" class="btn btn-success btn-sm"><a
+                                        href="<?php echo base_url(); ?>sign_up_controller/logout">LogOut</a></button>
+                            </div>
+                        <?php } else { ?>
+                            <div class="login btn padding-horiz-20">
+                                <button type="button" class="btn btn-success btn-sm"><a
+                                        href="<?php echo base_url(); ?>page_nav_controller/goto_login">Log In</a></button>
+                                <button type="button" class="btn btn-success btn-sm"><a
+                                        href="<?php echo base_url(); ?>page_nav_controller/goto_signup">Sign Up</a></button>
                         </div>
-
+                        <?php } ?>
                     </ul>
                 </div>
 
