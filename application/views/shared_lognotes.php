@@ -111,8 +111,9 @@
                 <div class="col-md-12">
                     <!-- Filter Buttons -->
                     <form action="<?php echo base_url(); ?>lognote_controller/search_by_shape" method="post">
+                        Search by
                         <select id="shape" name="shape">
-                            <option value="">Category</option>
+                            <option value="shape">Category</option>
                             <option value="1">Shearwaters,petrers & Ganners</option>
                             <option value="2">Comorants and Pelicans</option>
                             <option value="3">Herons, Egrets & Storks</option>
@@ -135,11 +136,8 @@
                             <option value="20">Crows</option>
                             <option value="21">Small Brown Bird</option>
                         </select>
-                        <button class="btn btn-primary" type="submit">Search</button>
-                    </form>
-                    <form action="<?php echo base_url(); ?>lognote_controller/search_by_province" method="post">
                         <select id="province" name="province">
-                            <option value="">Province</option>
+                            <option value="province">Province</option>
                             <option value="Central">Central</option>
                             <option value="Eastern">Eastern</option>
                             <option value="North Central">North Central</option>
@@ -150,11 +148,8 @@
                             <option value="Western">Western</option>
 
                         </select>
-                        <button class="btn btn-primary" type="submit">Search</button>
-                    </form>
-                    <form action="<?php echo base_url(); ?>lognote_controller/search_by_habitat" method="post">
                         <select id="habitat" name="habitat">
-                            <option value="">Habitat</option>
+                            <option value="habitat">Habitat</option>
                             <option value="Beach">Beach</option>
                             <option value="Dry Zone Forest">Dry Zone Forest</option>
                             <option value="Forest">Forest</option>
