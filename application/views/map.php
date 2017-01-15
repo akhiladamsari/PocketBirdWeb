@@ -180,7 +180,7 @@
                                         foreach ($mapdata as $data) {
                                             $lat = $data->latitude;
                                             $lng = $data->longitude;
-                                            $desc = "<img src='".base_url()."/shape/" . $data->shape . ".jpg' height=64 width=64><br>";
+                                            $desc = "<img src='".base_url()."/uploads/" . $data->image_ID . ".jpg' height=64 width=64><br>";
                                             $desc .= "Village: " . $data->village . "<br/>";
                                             $desc .= "Nearest city: " . $data->nearest_city . "<br/>";
 //                                            $desc .= "Size:" . $data->size . "<br/";
