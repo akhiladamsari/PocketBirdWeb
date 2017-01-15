@@ -74,7 +74,7 @@ class sign_up_controller extends CI_Controller
 
     public function logout()
     {
-        $this->session->sess_destroy();
+        session_destroy();
         $this->load->view('home');
     }
   /*  public function adminlogin()
