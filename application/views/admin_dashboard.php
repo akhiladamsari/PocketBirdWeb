@@ -167,7 +167,7 @@
 
                     </div>
                     <button type="button" class="btn btn-success btn-sm"><a
-                                href="<?php echo base_url(); ?>page_nav_controller/goto_signup">view details</a>
+                                href="<?php echo base_url(); ?>sign_up_controller/select_new_lognotes">view details</a>
                     </button>
                 </div>
             </div>
@@ -340,6 +340,48 @@
                             <td style="padding: 10px;text-align: center;">
                                 <button type="button" class="btn btn-success btn-sm" style="margin: 2px"><a
                                             href="<?php echo base_url(); ?>sign_up_controller/update_viewed_complains/<?php echo $result['complain_ID'] ?>">viewed</a>
+                                </button>
+                            </td>
+
+                        </tr>
+
+                    <?php }
+                }//endforeach; ?>
+            </table>
+            <?php
+        }
+        if(!empty($newlognotes)) { ?>
+            <table border="2" style="background-color: ghostwhite; color: black; margin: 2px auto; width:70%;">
+                <caption style="font-size: large">NEW LOGNOTES</caption>
+                <tr >
+                    <th style="text-align: center">note_ID</th>
+                    <th style="text-align: center">user_ID</th>
+                    <th style="text-align: center">date</th>
+                    <th style="text-align: center">image_ID</th>
+                    <th style="text-align: center">province</th>
+                    <th style="text-align: center">name</th>
+                    <th></th>
+                </tr>
+                <?php if (isset($newlognotes)) {
+                    foreach ($newlognotes as $result) {//foreach($result  as $r):
+                        ?>
+                        <tr>
+                            <td style="padding: 10px;text-align: center;"><?php echo $result['note_ID'] ?></td>
+                            <td style="padding: 10px;text-align: center;"><?php echo $result['user_ID'] ?></td>
+                            <td style="padding: 10px;text-align: center;"><?php echo $result['date'] ?></td>
+                            <td style="padding: 10px;text-align: center;"><?php echo $result['image_ID'] ?></td>
+                            <td style="padding: 10px;text-align: center;"><?php echo $result['province'] ?></td>
+                            <td style="padding: 10px;text-align: center;"><?php echo $result['name'] ?></td>
+
+                            <td style="padding: 10px;text-align: center;">
+                                <button type="button" class="btn btn-success btn-sm" style="margin: 2px"><a
+                                            href="<?php echo base_url(); ?>sign_up_controller/detailed_new_lognote/<?php echo $result['note_ID']?>">Read More</a>
+                                </button>
+                                <button type="button" class="btn btn-success btn-sm" style="margin: 2px"><a
+                                            href="<?php echo base_url(); ?>sign_up_controller/approve_log/<?php echo $result['note_ID']?>">Approved</a>
+                                </button>
+                                <button type="button" class="btn btn-success btn-sm" style="margin: 2px"><a
+                                            href="<?php echo base_url(); ?>sign_up_controller/reject_log/<?php echo $result['note_ID']?>">Reject</a>
                                 </button>
                             </td>
 

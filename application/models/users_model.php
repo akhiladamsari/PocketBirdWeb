@@ -173,5 +173,38 @@ class users_model extends CI_Model  {
         $this->db->where('complain_ID', $data_id);
         $this->db->update('complain', $data);
     }
+    public function get_new_lognotes(){
+        $this->db->where('viewed', 0);
+        $query = $this->db->get('log_note_detail');
+
+        return $query->result_array();
+    }
+    public function get_a_lognote($data_id){
+        $this->db->where('note_ID', $data_id);
+        $query = $this->db->get('log_note_detail');
+
+        return $query->result_array();
+    }
+    public function approvedlog($data_id)
+    {
+        $data = array(
+            'viewed' => 1,
+            'approved' => 1,
+
+        );
+        $this->db->where('note_ID', $data_id);
+        $this->db->update('log_note_detail', $data);
+    }
+    public function rejectlog($data_id)
+    {
+        $data = array(
+            'viewed' => 1,
+
+
+        );
+        $this->db->where('note_ID', $data_id);
+        $this->db->update('log_note_detail', $data);
+    }
+
 }
 ?>
