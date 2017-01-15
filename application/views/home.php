@@ -59,29 +59,26 @@
                         </li>
                         <li>
 
-                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_bird_glossary" class="fa-gears ">Bird
-                                Glossary</a>
+                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_bird_glossary" class="fa-book ">Bird Glossary</a>
                         <li>
-                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_map" class="fa-home">Map</a>
+                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_map" class="fa-map-marker active">Map</a>
                         </li>
                         <li>
-                            <span class="fa-font ">Log Note Library</span>
+                            <span class="fa-copy ">Log Note Library</span>
                             <ul>
                                 <li>
                                     <a href="<?php echo base_url(); ?>page_nav_controller/goto_my_log_notes">My Log Notes</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url(); ?>page_nav_controller/goto_shared_lognotes">Shared Log
-                                        Notes</a>
+                                    <a href="<?php echo base_url(); ?>page_nav_controller/goto_shared_lognotes">Shared Log Notes</a>
                                 </li>
                             </ul>
-                        </li>
-                        <li>
+                        </li><li>
                             <a href="<?php echo base_url(); ?>page_nav_controller/goto_gallery" class="fa-th ">Gallery</a>
 
                         </li>
                         <li>
-                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_about_us" class="fa-comment ">About Us</a>
+                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_about_us" class="fa-group ">About Us</a>
                         </li>
                         <li>
                             <a href="<?php echo base_url(); ?>page_nav_controller/goto_contact" class="fa-comment ">Contact Us</a>
@@ -100,7 +97,6 @@
                                         href="<?php echo base_url(); ?>page_nav_controller/goto_signup">Sign Up</a></button>
                             </div>
                         <?php } ?>
-
                     </ul>
                 </div>
 
@@ -160,12 +156,11 @@
             <!-- Main Text -->
             <div class="col-md-6">
                 <h2>Introduction</h2>
-                <p>With the development of the technology and busy life, people tend to use web based management systems
-                    instead of manual systems in every industry. Scientists and nature lovers feel uncomfortable with
-                    the manual log entry system prevailing. We are introducing an Electronic Log Book for Scientists and
-                    Nature Lovers to track animal data and maintain check lists instead of the manual system. Our system
-                    consisted of a web portal for all users and mobile application which can access Scientists and
-                    nature lovers separately according to their needs.
+                <p>Since the Pocket Bird can be used on mobile devices, it can go anywhere bird-watchers go and give a good solution for the inconvenient situations of the manual system. Pocket Bird makes it easy to record birds you see in the field, and build up unlimited links for your seamless observations with the Pocket Bird database. Pocket Bird makes it easy to keep track of what you see in the field.  This free resource can be used for the users within the Sri Lanka.</p>
+                    One of the most valuable feature of the Pocket Bird mobile application is passing information from the mobile directly to your account on the Pocket Bird website. The birding community can reports and accesses information about birds through Pocket Bird.</p>
+                    Pocket Bird provides worthy information openly available on the pocket Bird web application for scientific researches, education and conservation of bird resource in the country. There the professional bird watchers and the users can be able to access information with images taken from the Pocket Bird mobile application which filtered from twenty one bird categories exist in the bird world. A birder simply enters nearest location, habitat, behavior, shape, color, shape they looks like, what category they belongs to with images of the bird in the form of a log note.</p>
+                    Furthermore we are willing to develop both the mobile application and the web application which will be able satisfy and cater the birders more user friendly manner and with more developed features in near future.</p>
+
 
                 <p>There are electronic log books for birds such as eBird. But there is a need of an electronic logbook
                     for animals. Our system will help to three main parties. They are the Scientists, wildlife
@@ -179,21 +174,18 @@
                 <p>When we keep manual recordings the level of service is limited.
                     Since</p>
 
-                <ul>1. The checklists may have the ability to make errors.</ul>
-                <ul>2. Leaking of hardly gathered information in field visits.</ul>
-                <ul>3. Time consuming and costly to maintain manual checklists.</ul>
-                <ul>4. Reduction in sharing information about animals.</ul>
-                <ul>5. Duplication of data entry.</ul>
-                <ul>6. Difficulty in note down the locations, timing with respective to the animals during scrape
-                    situations
-                </ul>
-                <ul>7. It takes more effort and physical space to keep track of paper documents, maintain and to find
-                    gathered information when needed.
-                </ul>
+                <ul>•	Keep records of birds see in the field.</ul>
+                <ul>•	Keep track of your bird list as images in the gallery.</ul>
+                <ul>•	View the habitat location with a map</ul>
+                <ul>•	Bird Glossary…………………………………………………………</ul>
+                <ul>•	Share the log notes for the Pocket Bird community</ul>
+                <ul>•	Conserve the birds and supports birders.</ul>
+
 
                 Our electronic log book can serve for thousands of people interested about animals worldwide.
                 So, the system may help to animal researches and to make people known about the animals and conserve the
                 animal life.</p>
+                <img src="<?php echo base_url(); ?>img/applogo.png" alt="Logo" height="100">
             </div>
         </div>
     </div>

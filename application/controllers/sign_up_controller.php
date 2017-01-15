@@ -65,7 +65,11 @@ class sign_up_controller extends CI_Controller
                 $this->load->view('home');
             }
         } else {
+<<<<<<< HEAD
             $this->errordata['message'] = 'Your Username and Password are mismatch or Your account has not activated yet!';
+=======
+            $this->errordata['message'] = 'Your Username and Password are mismatch!';
+>>>>>>> 86190403d8152e3d7c4d35304d171b903500d09b
             $this->load->view('login',$this->errordata);
         }
     }
@@ -73,7 +77,7 @@ class sign_up_controller extends CI_Controller
 
     public function logout()
     {
-        $this->session->sess_destroy();
+        session_destroy();
         $this->load->view('home');
     }
   /*  public function adminlogin()

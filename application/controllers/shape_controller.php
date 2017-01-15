@@ -1,8 +1,16 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class ishape_controller extends CI_Controller{
+class shape_controller extends CI_Controller{
 
-    public function get_image_link($image_ID){
+    public function display_all_images(){
+        $this->load->model('shape_model');
+        $lognote['shape'] = $this->shape_model->get_all_shapes();
+        $this->load->view('shape_description',$lognote);
+    }
 
+    public function get_description($shape_id){
+        $this->load->model('shape_model');
+        $lognote['shape'] = $this->shape_model->get_description($shape_id);
+        $this->load->view('shape_description',$lognote);
     }
 }

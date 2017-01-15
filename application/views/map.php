@@ -62,12 +62,12 @@
                         </li>
                         <li>
 
-                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_bird_glossary" class="fa-gears ">Bird Glossary</a>
+                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_bird_glossary" class="fa-book ">Bird Glossary</a>
                         <li>
-                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_map" class="fa-home active">Map</a>
+                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_map" class="fa-map-marker active">Map</a>
                         </li>
                         <li>
-                            <span class="fa-font ">Log Note Library</span>
+                            <span class="fa-copy ">Log Note Library</span>
                             <ul>
                                 <li>
                                     <a href="<?php echo base_url(); ?>page_nav_controller/goto_my_log_notes">My Log Notes</a>
@@ -81,13 +81,25 @@
 
                         </li>
                         <li>
+                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_about_us" class="fa-group ">About Us</a>
+                        </li>
+                        <li>
                             <a href="<?php echo base_url(); ?>page_nav_controller/goto_contact" class="fa-comment ">Contact Us</a>
                         </li>
-                        <div class="login btn padding-horiz-20">
-                            <button type="button" class="btn btn-success btn-sm"><a href="<?php echo base_url(); ?>page_nav_controller/goto_login">Log In</a></button>
-                            <button type="button" class="btn btn-success btn-sm"><a href="<?php echo base_url(); ?>page_nav_controller/goto_signup">Sign Up</a></button>
+                        <?php if ($this->session->has_userdata('username')) { ?>
+                            <div class="login btn padding-horiz-20">
+                                <p><?php echo $this->session->userdata('username') ?></p>
+                                <button type="button" class="btn btn-success btn-sm"><a
+                                        href="<?php echo base_url(); ?>sign_up_controller/logout">LogOut</a></button>
+                            </div>
+                        <?php } else { ?>
+                            <div class="login btn padding-horiz-20">
+                                <button type="button" class="btn btn-success btn-sm"><a
+                                        href="<?php echo base_url(); ?>page_nav_controller/goto_login">Log In</a></button>
+                                <button type="button" class="btn btn-success btn-sm"><a
+                                        href="<?php echo base_url(); ?>page_nav_controller/goto_signup">Sign Up</a></button>
                         </div>
-
+                        <?php } ?>
                     </ul>
                 </div>
 
@@ -136,10 +148,8 @@
                         <option value="21"<?php if ($shape == '21') echo ' selected="selected"';?>>Small Brown Bird</option>
                         
                     </select> 
-                    <button type="submit">SEARCH</button>
+                    <button class="btn btn-primary" type="submit">SEARCH</button>
                  </form> 
-                
-                
                             
                             <!-- Intro / Why Us? -->
                 <div class="row">
@@ -167,22 +177,47 @@
                                     zoom: 7
                                 });
                                 
+                                
+                                
                                    <?php 
                                         foreach ($mapdata as $data) {
                                             $lat = $data->latitude;
                                             $lng = $data->longitude;
-                                            echo "addMarker($lat, $lng);\n";
+                                            $desc = "<img src='".base_url()."/uploads/" . $data->image_ID . ".jpg' height=64 width=64><br>";
+                                            $desc .= "Village: " . $data->village . "<br/>";
+                                            $desc .= "Nearest city: " . $data->nearest_city . "<br/>";
+                                            $desc .= "Size:" . $data->size . "<br/";
+                                            $desc .= "Looks like: " . $data->looks_like . "<br/>";
+//                                            $desc .= "Colors: " . $data->colors . "<br />";
+                                            $desc .= "Behaviour: " . $data->behaviour . "<br />";
+                                            $desc .= "Description: " . $data->Description;
+                                            echo "addMarker($lat, $lng, \"$desc\");\n";
                                         }
                                     ?>
                             }
                             
-                            function addMarker(lat, lng) {
+                            function addMarker(lat, lng, desc) {
                                 var pos = new google.maps.LatLng(lat,lng);
                                 var marker = new google.maps.Marker({
                                     position: pos,
                                     map: map
                                 });
+                                google.maps.event.addListener(marker,'click',function()  {
+                                    var infowindow = new google.maps.InfoWindow({
+                                      content:desc,
+                                      maxWidth: 200 , maxHeight:200 ,  backgroundColor: "#00152"
+                                        
+    
+                                    });
+                                    
+                                    infowindow.open(map,marker);
+                                 google.maps.event.addListener(map, "click", function(event) {
+                                    infowindow.close();
+                                    }); 
+                                });
+
                             }
+                            
                         </script>
                     </div>
 
@@ -194,7 +229,6 @@
                     <hr class="margin-top-3	0">
              
                     <hr>
->>>>>>> 92b8a5ba48b3fbbbfa06accceea872ab14496fc8
                 </div>
             </div>
         </div>

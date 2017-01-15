@@ -2075,8 +2075,8 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #33747a;
-  border-color: #2b6368;
+  background-color: #1b5e20;
+  border-color: #1b5e20;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -2116,8 +2116,8 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success {
   color: #ffffff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: #1b5e20;
+  border-color: #1b5e20;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -2125,8 +2125,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
   color: #ffffff;
-  background-color: #47a447;
-  border-color: #398439;
+  background-color: #1b5e20;
+  border-color: #1b5e20;
 }
 .btn-success:active,
 .btn-success.active,
@@ -2148,11 +2148,11 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: #1b5e20;
+  border-color: #1b5e20;
 }
 .btn-success .badge {
-  color: #5cb85c;
+  color: #1b5e20;
   background-color: #ffffff;
 }
 .btn-info {
@@ -2166,8 +2166,8 @@ fieldset[disabled] .btn-success.active {
 .btn-info.active,
 .open .dropdown-toggle.btn-info {
   color: #ffffff;
-  background-color: #2abc1c;
-  border-color: #2abc1c;
+  background-color: #1b5e20;
+  border-color: #1b5e20;
 }
 .btn-info:active,
 .btn-info.active,
@@ -2189,11 +2189,11 @@ fieldset[disabled] .btn-info:active,
 .btn-info.disabled.active,
 .btn-info[disabled].active,
 fieldset[disabled] .btn-info.active {
-  background-color: #43bf23;
-  border-color: #43bf23;
+  background-color: #1b5e20;
+  border-color: #1b5e20;
 }
 .btn-info .badge {
-  color: #43bf23;
+  color: #1b5e20;
   background-color: #ffffff;
 }
 .btn-warning {
@@ -2279,7 +2279,7 @@ fieldset[disabled] .btn-danger.active {
   background-color: #ffffff;
 }
 .btn-link {
-  color: #43bf23;
+  color: #1b5e20;
   font-weight: normal;
   cursor: pointer;
   border-radius: 0;
