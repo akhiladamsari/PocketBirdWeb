@@ -183,7 +183,7 @@
                                             $desc = "<img src='".base_url()."/uploads/" . $data->image_ID . ".jpg' height=64 width=64><br>";
                                             $desc .= "Village: " . $data->village . "<br/>";
                                             $desc .= "Nearest city: " . $data->nearest_city . "<br/>";
-//                                            $desc .= "Size:" . $data->size . "<br/";
+                                            $desc .= "Size:" . $data->size . "<br/";
                                             $desc .= "Looks like: " . $data->looks_like . "<br/>";
 //                                            $desc .= "Colors: " . $data->colors . "<br />";
                                             $desc .= "Behaviour: " . $data->behaviour . "<br />";
@@ -199,13 +199,19 @@
                                     position: pos,
                                     map: map
                                 });
-                                google.maps.event.addListener(marker,'click',function() {
+                                google.maps.event.addListener(marker,'click',function()  {
                                     var infowindow = new google.maps.InfoWindow({
-                                      content:desc
+                                      content:desc 
                                     });
+                                    
                                     infowindow.open(map,marker);
+                                 google.maps.event.addListener(map, "click", function(event) {
+                                    infowindow.close();
+                                    }); 
                                 });
+
                             }
+                            
                         </script>
                     </div>
 
