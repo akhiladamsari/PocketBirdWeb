@@ -109,8 +109,8 @@ class sign_up_controller extends CI_Controller
         }
         return $data;
     }
-
 */
+
 
     public function count_new_users(){
         $this->load->model('users_model');
@@ -157,7 +157,7 @@ class sign_up_controller extends CI_Controller
 
             //  $this->users_model->count_new_users();
         }else{
-            $this->load->view('adminlogin');
+            $this->load->view('login');
         }
     }
     public function updateview(){
@@ -188,7 +188,7 @@ class sign_up_controller extends CI_Controller
 
             //  $this->users_model->count_new_users();
         }else{
-            $this->load->view('adminlogin');
+            $this->load->view('login');
         }
     }
     public function deleteuser(){
@@ -220,7 +220,7 @@ class sign_up_controller extends CI_Controller
 
             //  $this->users_model->count_new_users();
         }else{
-            $this->load->view('adminlogin');
+            $this->load->view('login');
         }
     }
     public function update_viewed_comment(){
@@ -261,7 +261,7 @@ class sign_up_controller extends CI_Controller
 
             //  $this->users_model->count_new_users();
         }else{
-            $this->load->view('adminlogin');
+            $this->load->view('login');
         }
     }
     public function update_viewed_complains(){
@@ -272,6 +272,43 @@ class sign_up_controller extends CI_Controller
         //$this->load->view('admin_dashboard',$data);
     }
     public function select_new_lognotes(){
+        if ($this->session->has_userdata('username') && ($this->session->userdata['active']==1)) {
+            $result = $this->count_new_users();
+            $result2 = $this->count_new_comments();
+            $result3 = $this->count_new_lognotes();
+            $result4 = $this->count_new_complains();
+            $data['users'] = $result;
+            $data['comments'] = $result2;
+            $data['lognotes'] = $result3;
+            $data['complains'] = $result4;
+            $this->load->model('lognote_model');
+            $data['newlognotes'] = $this->users_model->get_new_lognotes();
+            $this->load->view('admin_dashboard', $data);
+        }else{
+            $this->load->view('login');
+        }
+        }
 
+    public function detailed_new_lognote(){
+        $data_id = $this->uri->segment(3);
+        $this->load->model('users_model');
+        $data['lognote'] = $this->users_model->get_a_lognote($data_id);
+        $this->load->view('newlognote',$data);
     }
+    public function reject_log(){
+        $data_id = $this->uri->segment(3);
+        $this->load->model('users_model');
+        $this->users_model->rejectlog($data_id);
+        $this->select_new_lognotes();
+        //$this->load->view('admin_dashboard',$data);
+    }
+
+    public function approve_log(){
+        $data_id = $this->uri->segment(3);
+        $this->load->model('users_model');
+        $this->users_model->approvedlog($data_id);
+        $this->select_new_lognotes();
+    }
+
+
 }
