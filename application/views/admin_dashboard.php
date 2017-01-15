@@ -341,6 +341,9 @@
                                 <button type="button" class="btn btn-success btn-sm" style="margin: 2px"><a
                                             href="<?php echo base_url(); ?>sign_up_controller/update_viewed_complains/<?php echo $result['complain_ID'] ?>">viewed</a>
                                 </button>
+                                <button type="button" class="btn btn-success btn-sm" style="margin: 2px"><a
+                                            href="<?php echo base_url(); ?>sign_up_controller/update_approve_complains/<?php echo $result['complain_ID'] ?>">approve</a>
+                                </button>
                             </td>
 
                         </tr>

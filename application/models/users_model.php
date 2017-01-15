@@ -173,6 +173,17 @@ class users_model extends CI_Model  {
         $this->db->where('complain_ID', $data_id);
         $this->db->update('complain', $data);
     }
+    public function approvecomplain($data_id)
+    {
+        $data = array(
+            'viewed' => 1,
+            'apprved' => 1,
+
+
+        );
+        $this->db->where('complain_ID', $data_id);
+        $this->db->update('complain', $data);
+    }
     public function get_new_lognotes(){
         $this->db->where('viewed', 0);
         $query = $this->db->get('log_note_detail');
