@@ -36,7 +36,7 @@
             <div class="row">
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="<?php echo base_url(); ?>page_nav_controller/goto_home">
+                    <a href="index.html">
                         <img src="<?php echo base_url(); ?>img/applogo.png" alt="Logo"  height="100"  >                            </a>
                 </div>
                 <!-- End Logo -->
@@ -75,9 +75,6 @@
 
                         </li>
                         <li>
-                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_about_us" class="fa-comment ">About Us</a>
-                        </li>
-                        <li>
                             <a href="<?php echo base_url(); ?>page_nav_controller/goto_contact" class="fa-comment ">Contact Us</a>
                         </li>
                         <div class="login btn padding-horiz-20">
@@ -101,12 +98,9 @@
                 <div class="row margin-vert-30">
                     <!-- Login Box -->
                     <div class="col-md-6 col-md-offset-3 col-sm-offset-3">
-                        <form class="login-page" method="post" action="<?php echo base_url(); ?>sign_up_controller/login">
+                        <form class="login-page" method="post" action="<?php echo base_url(); ?>sign_up_controller/adminlogin">
                             <div class="login-header margin-bottom-30">
                                 <h2>Login to your account</h2>
-                                <?php if(!empty($message))
-                                    echo $message;
-                                ?>
                             </div>
                             <div class="input-group margin-bottom-20">
                                         <span class="input-group-addon">
