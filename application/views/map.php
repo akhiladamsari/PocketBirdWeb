@@ -183,6 +183,7 @@
                                             $desc = "<img src='".base_url()."/shape/" . $data->shape . ".jpg' height=64 width=64><br>";
                                             $desc .= "Village: " . $data->village . "<br/>";
                                             $desc .= "Nearest city: " . $data->nearest_city . "<br/>";
+//                                            $desc .= "Size:" . $data->size . "<br/";
                                             $desc .= "Looks like: " . $data->looks_like . "<br/>";
 //                                            $desc .= "Colors: " . $data->colors . "<br />";
                                             $desc .= "Behaviour: " . $data->behaviour . "<br />";
@@ -198,12 +199,12 @@
                                     position: pos,
                                     map: map
                                 });
-                                google.maps.event.addListener(marker,'click',function() {
-                                    var infowindow = new google.maps.InfoWindow({
-                                      content:desc
-                                    });
-                                    infowindow.open(map,marker);
-                                });
+//                                google.maps.event.addListener(marker,'click',function() {
+//                                    var infowindow = new google.maps.InfoWindow({
+//                                      content:desc
+//                                    });
+//                                    infowindow.open(map,marker);
+//                                });
                             }
                         </script>
                     </div>
