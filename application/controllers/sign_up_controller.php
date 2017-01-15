@@ -271,6 +271,13 @@ class sign_up_controller extends CI_Controller
         $this->select_new_complains();
         //$this->load->view('admin_dashboard',$data);
     }
+    public function update_approve_complains(){
+        $data_id = $this->uri->segment(3);
+        $this->load->model('users_model');
+        $this->users_model->approvecomplain($data_id);
+        $this->select_new_complains();
+        //$this->load->view('admin_dashboard',$data);
+    }
     public function select_new_lognotes(){
         if ($this->session->has_userdata('username') && ($this->session->userdata['active']==1)) {
             $result = $this->count_new_users();
