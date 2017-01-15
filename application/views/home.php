@@ -37,6 +37,7 @@
         <div class="container">
             <div class="row">
                 <!-- Logo -->
+
                 <div class="logo">
                     <a href="<?php echo base_url(); ?>page_nav_controller/goto_home">
                         <img src="<?php echo base_url(); ?>img/applogo.png" alt="Logo" height="100"> </a>

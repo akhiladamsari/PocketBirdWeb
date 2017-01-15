@@ -50,17 +50,23 @@ class sign_up_controller extends CI_Controller
         $password = $this->input->post('password');
         $this->load->model('users_model');
         $result = $this->users_model->user_login($username,$password);
-
         if ($result == TRUE) {
             $newdata = array(
                 'username' => $this->input->post('username'),
                 'logged_in' => TRUE
             );
-            $this->session->set_userdata($newdata);
 
-            $this->load->view('home');
+            $resultactive = $this->users_model->check_active($username,$password);
+            $newdata['active']=TRUE;
+            $this->session->set_userdata($newdata);
+            if($resultactive == TRUE){
+                $this->select_new_users();
+            }else {
+                $this->load->view('home');
+            }
         } else {
-            $this->load->view('login');
+            $this->errordata['message'] = 'Your Username and Password are mismatch or Your account has not activated yet!';
+            $this->load->view('login',$this->errordata);
         }
     }
 
@@ -70,7 +76,7 @@ class sign_up_controller extends CI_Controller
         $this->session->sess_destroy();
         $this->load->view('home');
     }
-    public function adminlogin()
+  /*  public function adminlogin()
     {
         //$result = new sign_up_controller().count_users();
         $result=$this->count_new_users();
@@ -102,7 +108,7 @@ class sign_up_controller extends CI_Controller
         }
         return $data;
     }
-
+*/
 
 
     public function count_new_users(){
@@ -132,7 +138,7 @@ class sign_up_controller extends CI_Controller
     public function select_new_users()
     {
         //$da = $this->adminlogin();
-        if ($this->session->has_userdata('username')) {
+        if ($this->session->has_userdata('username') && ($this->session->userdata['active']==1)) {
             $result = $this->count_new_users();
             $result2 = $this->count_new_comments();
             $result3 = $this->count_new_lognotes();
@@ -150,7 +156,7 @@ class sign_up_controller extends CI_Controller
 
             //  $this->users_model->count_new_users();
         }else{
-            $this->load->view('adminlogin');
+            $this->load->view('login');
         }
     }
     public function updateview(){
@@ -171,7 +177,7 @@ class sign_up_controller extends CI_Controller
     public function remove_user()
     {
         //$da = $this->adminlogin();
-        if ($this->session->has_userdata('username')) {
+        if ($this->session->has_userdata('username') && ($this->session->userdata['active']==1)) {
 
             $this->load->model('users_model');
             $data['userdetail']=NULL;
@@ -181,7 +187,7 @@ class sign_up_controller extends CI_Controller
 
             //  $this->users_model->count_new_users();
         }else{
-            $this->load->view('adminlogin');
+            $this->load->view('login');
         }
     }
     public function deleteuser(){
@@ -195,7 +201,7 @@ class sign_up_controller extends CI_Controller
     public function select_new_comment()
     {
         //$da = $this->adminlogin();
-        if ($this->session->has_userdata('username')) {
+        if ($this->session->has_userdata('username') && ($this->session->userdata['active']==1)) {
             $result = $this->count_new_users();
             $result2 = $this->count_new_comments();
             $result3 = $this->count_new_lognotes();
@@ -213,7 +219,7 @@ class sign_up_controller extends CI_Controller
 
             //  $this->users_model->count_new_users();
         }else{
-            $this->load->view('adminlogin');
+            $this->load->view('login');
         }
     }
     public function update_viewed_comment(){
@@ -236,7 +242,7 @@ class sign_up_controller extends CI_Controller
     public function select_new_complains()
     {
         //$da = $this->adminlogin();
-        if ($this->session->has_userdata('username')) {
+        if ($this->session->has_userdata('username') && ($this->session->userdata['active']==1)) {
             $result = $this->count_new_users();
             $result2 = $this->count_new_comments();
             $result3 = $this->count_new_lognotes();
@@ -254,7 +260,7 @@ class sign_up_controller extends CI_Controller
 
             //  $this->users_model->count_new_users();
         }else{
-            $this->load->view('adminlogin');
+            $this->load->view('login');
         }
     }
     public function update_viewed_complains(){
@@ -264,7 +270,51 @@ class sign_up_controller extends CI_Controller
         $this->select_new_complains();
         //$this->load->view('admin_dashboard',$data);
     }
-    public function select_new_lognotes(){
-
+    public function update_approve_complains(){
+        $data_id = $this->uri->segment(3);
+        $this->load->model('users_model');
+        $this->users_model->approvecomplain($data_id);
+        $this->select_new_complains();
+        //$this->load->view('admin_dashboard',$data);
     }
+    public function select_new_lognotes(){
+        if ($this->session->has_userdata('username') && ($this->session->userdata['active']==1)) {
+            $result = $this->count_new_users();
+            $result2 = $this->count_new_comments();
+            $result3 = $this->count_new_lognotes();
+            $result4 = $this->count_new_complains();
+            $data['users'] = $result;
+            $data['comments'] = $result2;
+            $data['lognotes'] = $result3;
+            $data['complains'] = $result4;
+            $this->load->model('lognote_model');
+            $data['newlognotes'] = $this->users_model->get_new_lognotes();
+            $this->load->view('admin_dashboard', $data);
+        }else{
+            $this->load->view('login');
+        }
+        }
+
+    public function detailed_new_lognote(){
+        $data_id = $this->uri->segment(3);
+        $this->load->model('users_model');
+        $data['lognote'] = $this->users_model->get_a_lognote($data_id);
+        $this->load->view('newlognote',$data);
+    }
+    public function reject_log(){
+        $data_id = $this->uri->segment(3);
+        $this->load->model('users_model');
+        $this->users_model->rejectlog($data_id);
+        $this->select_new_lognotes();
+        //$this->load->view('admin_dashboard',$data);
+    }
+
+    public function approve_log(){
+        $data_id = $this->uri->segment(3);
+        $this->load->model('users_model');
+        $this->users_model->approvedlog($data_id);
+        $this->select_new_lognotes();
+    }
+
+
 }

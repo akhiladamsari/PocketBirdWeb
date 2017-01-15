@@ -104,6 +104,9 @@
                         <form class="login-page" method="post" action="<?php echo base_url(); ?>sign_up_controller/login">
                             <div class="login-header margin-bottom-30">
                                 <h2>Login to your account</h2>
+                                <?php if(!empty($message))
+                                    echo $message;
+                                ?>
                             </div>
                             <div class="input-group margin-bottom-20">
                                         <span class="input-group-addon">

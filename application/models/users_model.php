@@ -22,6 +22,18 @@ class users_model extends CI_Model  {
     public function user_login($username,$password){
         $this->db->where("username", $username);
         $this->db->where("password", $password);
+        $this->db->where("approved", 1);
+        $this->db->get("users");
+        if ($this->db->affected_rows() > 0) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public function check_active($username,$password){
+        $this->db->where("username", $username);
+        $this->db->where("password", $password);
+        $this->db->where("active", 1);
         $this->db->get("users");
         if ($this->db->affected_rows() > 0) {
             return true;
@@ -162,5 +174,49 @@ class users_model extends CI_Model  {
         $this->db->where('complain_ID', $data_id);
         $this->db->update('complain', $data);
     }
+    public function approvecomplain($data_id)
+    {
+        $data = array(
+            'viewed' => 1,
+            'apprved' => 1,
+
+
+        );
+        $this->db->where('complain_ID', $data_id);
+        $this->db->update('complain', $data);
+    }
+    public function get_new_lognotes(){
+        $this->db->where('viewed', 0);
+        $query = $this->db->get('log_note_detail');
+
+        return $query->result_array();
+    }
+    public function get_a_lognote($data_id){
+        $this->db->where('note_ID', $data_id);
+        $query = $this->db->get('log_note_detail');
+
+        return $query->result_array();
+    }
+    public function approvedlog($data_id)
+    {
+        $data = array(
+            'viewed' => 1,
+            'approved' => 1,
+
+        );
+        $this->db->where('note_ID', $data_id);
+        $this->db->update('log_note_detail', $data);
+    }
+    public function rejectlog($data_id)
+    {
+        $data = array(
+            'viewed' => 1,
+
+
+        );
+        $this->db->where('note_ID', $data_id);
+        $this->db->update('log_note_detail', $data);
+    }
+
 }
 ?>
