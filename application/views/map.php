@@ -127,6 +127,7 @@
                         <option value="4"<?php  if ($shape == '4') echo ' selected="selected"';?>>Duck</option>
                         <option value="5"<?php  if ($shape == '5') echo ' selected="selected"';?>>Eagle</option>
                         <option value="6"<?php  if ($shape == '6') echo ' selected="selected"';?>>Quail</option>
+                        <option value="6_1"<?php if ($shape == '6_1') echo ' selected="selected"';?>>Fowl</option>
                         <option value="7"<?php  if ($shape == '7') echo ' selected="selected"';?>>Rils</option>
                         <option value="8"<?php  if ($shape == '8') echo ' selected="selected"';?>>Shore Birds</option>
                         <option value="9"<?php  if ($shape == '9') echo ' selected="selected"';?>>Piegeons</option>
@@ -146,8 +147,6 @@
                     </select> 
                     <button type="submit">SEARCH</button>
                  </form> 
-                
-                
                             
                             <!-- Intro / Why Us? -->
                 <div class="row">
@@ -175,20 +174,36 @@
                                     zoom: 7
                                 });
                                 
+                                
+                                
                                    <?php 
                                         foreach ($mapdata as $data) {
                                             $lat = $data->latitude;
                                             $lng = $data->longitude;
-                                            echo "addMarker($lat, $lng);\n";
+                                            $desc = "<img src='".base_url()."/shape/" . $data->shape . ".jpg' height=64 width=64><br>";
+                                            $desc .= "Village: " . $data->village . "<br/>";
+                                            $desc .= "Nearest city: " . $data->nearest_city . "<br/>";
+//                                            $desc .= "Size:" . $data->size . "<br/";
+                                            $desc .= "Looks like: " . $data->looks_like . "<br/>";
+//                                            $desc .= "Colors: " . $data->colors . "<br />";
+                                            $desc .= "Behaviour: " . $data->behaviour . "<br />";
+                                            $desc .= "Description: " . $data->Description;
+                                            echo "addMarker($lat, $lng, \"$desc\");\n";
                                         }
                                     ?>
                             }
                             
-                            function addMarker(lat, lng) {
+                            function addMarker(lat, lng, desc) {
                                 var pos = new google.maps.LatLng(lat,lng);
                                 var marker = new google.maps.Marker({
                                     position: pos,
                                     map: map
+                                });
+                                google.maps.event.addListener(marker,'click',function() {
+                                    var infowindow = new google.maps.InfoWindow({
+                                      content:desc
+                                    });
+                                    infowindow.open(map,marker);
                                 });
                             }
                         </script>
@@ -202,7 +217,6 @@
                     <hr class="margin-top-3	0">
              
                     <hr>
-
                 </div>
             </div>
         </div>
