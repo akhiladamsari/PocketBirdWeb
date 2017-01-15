@@ -115,90 +115,35 @@
     <!-- === BEGIN CONTENT === -->
     <div id="content">
         <div class="container background-white">
-            <?php
-            foreach($lognote as $bla){
-            ?>
             <div class="row margin-vert-30">
                 <!-- Main Column -->
+                <?php foreach($shape as $bla){?>
                 <div class="col-md-9">
                     <div class="blog-post">
                         <div class="blog-item-header">
                             <h2>
                                 <a href="#">
-                                    <?php // echo $bla['note_ID'];?>
+                                    <?php echo $bla->shape_name;?>
                                 </a>
                             </h2>
-                            <!-- Date -->
-                            <div class="blog-post-date">
-                                <a href="#"><?php echo $bla['exact_location'];?></a>
-                            </div>
-                            <!-- End Date -->
-                        </div>
-                        <div class="blog-post-details">
-                            <!-- Author Name -->
-                            <div class="blog-post-details-item blog-post-details-item-left user-icon">
-                                <i class="fa fa-user color-gray-light"></i>
-                                <a href="#"><?php// echo $bla['user_ID'];?></a>
-                            </div>
-                            <!-- End Author Name -->
-                            <!-- Tags -->
-                            <!--                            <div class="blog-post-details-item blog-post-details-item-left blog-post-details-tags">-->
-                            <!--                                <i class="fa fa-tag color-gray-light"></i>-->
-                            <!--                                <a href="#">--><?php //echo $bla->province;?><!--</a>,-->
-                            <!--                                <a href="#">Javascript</a>,-->
-                            <!--                                <a href="#">CoffeeScript</a>-->
-                            <!--                            </div>-->
-                            <!-- End Tags -->
-                            <!-- # of Comments -->
-                            <div class="blog-post-details-item blog-post-details-item-left blog-post-details-item-last">
-                                <a href="">
-                                    <i class="fa fa-comments color-gray-light"></i>
-                                    <?php //echo count($comment);?> comments
-                                </a>
-                            </div>
-                            <!-- End # of Comments -->
                         </div>
                         <div class="blog-item">
                             <div class="clearfix"></div>
                             <div class="blog-post-body row margin-top-15">
                                 <div class="col-md-5">
-                                    <img class="margin-bottom-20" src="<?php echo base_url(); ?>uploads/<?php echo $bla['image_ID'];?>.jpg" alt="image1" >
-                                    <p>
-                                        <bold> Province : </bold>         <?php echo $bla['province'];?><br>
-                                        <bold>Village :    </bold>       <?php echo $bla['village'];?><br>
-                                        <bold>Exact Location :   </bold> <?php echo $bla['exact_location'];?><br>
-                                        <bold>Nearest City :   </bold>   <?php echo $bla['nearest_city'];?><br>
-                                        <bold>Confidence Level : </bold> <?php echo $bla['confidence_level'];?><br>
-                                        <bold>Habitat :      </bold>     <?php echo $bla['habbitat'];?><br>
-                                        <bold>Size :       </bold>       <?php echo $bla['size'];?><br>
-                                        <bold>Looks Like :   </bold>     <?php echo $bla['looks_like'];?><br>
-                                        <bold>Color :     </bold>        <?php echo $bla['colors'];?><br>
-                                        <bold>Behaviour : </bold>        <?php echo $bla['behaviour'];?><br>
-                                        <bold>Description :     </bold>  <?php echo $bla['Description'];?><br>
-                                    </p>
+                                    <img class="margin-bottom-20" src="<?php echo base_url(); ?>shape/<?php echo $bla->shape_id;?>.jpg" alt="image1">
                                 </div>
                                 <div class="col-md-7">
-
-                                    <img class="margin-bottom-20" src="<?php echo base_url(); ?>shape/<?php echo $bla['shape'];?>.jpg" alt="image1" width="200" height="200">
-
+                                    <p><?php echo $bla->description;?></p>
                                 </div>
                                 <div class="col-md-12">
-                                    <p>
-                                    </p>
+                                    <p></p>
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-success btn-sm"><a
-                                    href="<?php echo base_url(); ?>sign_up_controller/select_new_lognotes">OK</a>
-                            </button>
-
                         </div>
                     </div>
-
-                    <!-- End Blog Post -->
                 </div>
-
-                <?php } ?>
-                <!-- End Main Column -->
+                <?php }?>
             </div>
         </div>
         <!-- === END CONTENT === -->

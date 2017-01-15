@@ -10,7 +10,9 @@ class page_nav_controller extends CI_Controller {
     }
 
     public function goto_bird_glossary(){
-        $this->load->view('bird_glossary');
+        $this->load->model('shape_model');
+        $lognote['shape'] = $this->shape_model->get_all_shapes();
+        $this->load->view('bird_glossary',$lognote);
     }
 
     public function goto_contact(){
