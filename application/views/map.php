@@ -118,7 +118,6 @@
                         <option value="4"<?php  if ($shape == '4') echo ' selected="selected"';?>>Duck</option>
                         <option value="5"<?php  if ($shape == '5') echo ' selected="selected"';?>>Eagle</option>
                         <option value="6"<?php  if ($shape == '6') echo ' selected="selected"';?>>Quail</option>
-                        <option value="6_1"<?php if ($shape == '6_1') echo ' selected="selected"';?>>Fowl</option>
                         <option value="7"<?php  if ($shape == '7') echo ' selected="selected"';?>>Rils</option>
                         <option value="8"<?php  if ($shape == '8') echo ' selected="selected"';?>>Shore Birds</option>
                         <option value="9"<?php  if ($shape == '9') echo ' selected="selected"';?>>Piegeons</option>
@@ -194,7 +193,7 @@
                     <hr class="margin-top-3	0">
              
                     <hr>
->>>>>>> 92b8a5ba48b3fbbbfa06accceea872ab14496fc8
+
                 </div>
             </div>
         </div>
