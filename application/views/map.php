@@ -62,12 +62,12 @@
                         </li>
                         <li>
 
-                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_bird_glossary" class="fa-gears ">Bird Glossary</a>
+                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_bird_glossary" class="fa-book ">Bird Glossary</a>
                         <li>
-                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_map" class="fa-home active">Map</a>
+                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_map" class="fa-map-marker active">Map</a>
                         </li>
                         <li>
-                            <span class="fa-font ">Log Note Library</span>
+                            <span class="fa-copy ">Log Note Library</span>
                             <ul>
                                 <li>
                                     <a href="<?php echo base_url(); ?>page_nav_controller/goto_my_log_notes">My Log Notes</a>
@@ -79,6 +79,9 @@
                         </li><li>
                             <a href="<?php echo base_url(); ?>page_nav_controller/goto_gallery" class="fa-th ">Gallery</a>
 
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_about_us" class="fa-group ">About Us</a>
                         </li>
                         <li>
                             <a href="<?php echo base_url(); ?>page_nav_controller/goto_contact" class="fa-comment ">Contact Us</a>
@@ -145,7 +148,7 @@
                         <option value="21"<?php if ($shape == '21') echo ' selected="selected"';?>>Small Brown Bird</option>
                         
                     </select> 
-                    <button type="submit">SEARCH</button>
+                    <button class="btn btn-primary" type="submit">SEARCH</button>
                  </form> 
                             
                             <!-- Intro / Why Us? -->
@@ -201,7 +204,10 @@
                                 });
                                 google.maps.event.addListener(marker,'click',function()  {
                                     var infowindow = new google.maps.InfoWindow({
-                                      content:desc 
+                                      content:desc,
+                                      maxWidth: 200 , maxHeight:200 ,  backgroundColor: "#00152"
+                                        
+    
                                     });
                                     
                                     infowindow.open(map,marker);

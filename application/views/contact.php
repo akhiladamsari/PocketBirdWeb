@@ -55,12 +55,12 @@
                         </li>
                         <li>
 
-                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_bird_glossary" class="fa-gears ">Bird Glossary</a>
+                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_bird_glossary" class="fa-book ">Bird Glossary</a>
                         <li>
-                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_map" class="fa-home active">Map</a>
+                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_map" class="fa-map-marker active">Map</a>
                         </li>
                         <li>
-                            <span class="fa-font ">Log Note Library</span>
+                            <span class="fa-copy ">Log Note Library</span>
                             <ul>
                                 <li>
                                     <a href="<?php echo base_url(); ?>page_nav_controller/goto_my_log_notes">My Log Notes</a>
@@ -74,7 +74,7 @@
 
                         </li>
                         <li>
-                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_about_us" class="fa-comment ">About Us</a>
+                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_about_us" class="fa-group ">About Us</a>
                         </li>
                         <li>
                             <a href="<?php echo base_url(); ?>page_nav_controller/goto_contact" class="fa-comment ">Contact Us</a>
@@ -93,7 +93,6 @@
                                         href="<?php echo base_url(); ?>page_nav_controller/goto_signup">Sign Up</a></button>
                             </div>
                         <?php } ?>
-
                     </ul>
                 </div>
 
