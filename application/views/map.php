@@ -204,7 +204,10 @@
                                 });
                                 google.maps.event.addListener(marker,'click',function()  {
                                     var infowindow = new google.maps.InfoWindow({
-                                      content:desc 
+                                      content:desc,
+                                      maxWidth: 200 , maxHeight:200 ,  backgroundColor: "#00152"
+                                        
+    
                                     });
                                     
                                     infowindow.open(map,marker);

@@ -58,26 +58,49 @@
                         </li>
                         <li>
 
+<<<<<<< HEAD
+                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_bird_glossary" class="fa-gears ">Bird
+                                Glossary</a>
+                        <li>
+                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_map" class="fa-home">Map</a>
+                        </li>
+                        <li>
+                            <span class="fa-font ">Log Note Library</span>
+=======
                             <a href="<?php echo base_url(); ?>page_nav_controller/goto_bird_glossary" class="fa-book ">Bird Glossary</a>
                         <li>
                             <a href="<?php echo base_url(); ?>page_nav_controller/goto_map" class="fa-map-marker active">Map</a>
                         </li>
                         <li>
                             <span class="fa-copy ">Log Note Library</span>
+>>>>>>> 86190403d8152e3d7c4d35304d171b903500d09b
                             <ul>
                                 <li>
                                     <a href="<?php echo base_url(); ?>page_nav_controller/goto_my_log_notes">My Log Notes</a>
                                 </li>
                                 <li>
+<<<<<<< HEAD
+                                    <a href="<?php echo base_url(); ?>page_nav_controller/goto_shared_lognotes">Shared Log
+                                        Notes</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+=======
                                     <a href="<?php echo base_url(); ?>page_nav_controller/goto_shared_lognotes">Shared Log Notes</a>
                                 </li>
                             </ul>
                         </li><li>
+>>>>>>> 86190403d8152e3d7c4d35304d171b903500d09b
                             <a href="<?php echo base_url(); ?>page_nav_controller/goto_gallery" class="fa-th ">Gallery</a>
 
                         </li>
                         <li>
+<<<<<<< HEAD
+                            <a href="<?php echo base_url(); ?>page_nav_controller/goto_about_us" class="fa-comment ">About Us</a>
+=======
                             <a href="<?php echo base_url(); ?>page_nav_controller/goto_about_us" class="fa-group ">About Us</a>
+>>>>>>> 86190403d8152e3d7c4d35304d171b903500d09b
                         </li>
                         <li>
                             <a href="<?php echo base_url(); ?>page_nav_controller/goto_contact" class="fa-comment ">Contact Us</a>
@@ -96,6 +119,10 @@
                                         href="<?php echo base_url(); ?>page_nav_controller/goto_signup">Sign Up</a></button>
                             </div>
                         <?php } ?>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 86190403d8152e3d7c4d35304d171b903500d09b
                     </ul>
                 </div>
 

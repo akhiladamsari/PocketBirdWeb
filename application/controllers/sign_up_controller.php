@@ -50,7 +50,6 @@ class sign_up_controller extends CI_Controller
         $password = $this->input->post('password');
         $this->load->model('users_model');
         $result = $this->users_model->user_login($username,$password);
-
         if ($result == TRUE) {
             $newdata = array(
                 'username' => $this->input->post('username'),
@@ -66,7 +65,11 @@ class sign_up_controller extends CI_Controller
                 $this->load->view('home');
             }
         } else {
+<<<<<<< HEAD
+            $this->errordata['message'] = 'Your Username and Password are mismatch or Your account has not activated yet!';
+=======
             $this->errordata['message'] = 'Your Username and Password are mismatch!';
+>>>>>>> 86190403d8152e3d7c4d35304d171b903500d09b
             $this->load->view('login',$this->errordata);
         }
     }
