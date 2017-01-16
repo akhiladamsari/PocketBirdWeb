@@ -9,9 +9,7 @@ class page_nav_controller extends CI_Controller {
         $this->load->view('adminlogin');
     }
 
-    public function goto_adminlogin(){
-        $this->load->view('adminlogin');
-    }
+
 
     public function goto_bird_glossary(){
         $this->load->model('shape_model');
