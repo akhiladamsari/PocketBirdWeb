@@ -22,6 +22,7 @@ class users_model extends CI_Model  {
     public function user_login($username,$password){
         $this->db->where("username", $username);
         $this->db->where("password", $password);
+        $this->db->where("approved", 1);
         $this->db->get("users");
         if ($this->db->affected_rows() > 0) {
             return true;

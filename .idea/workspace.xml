@@ -21,8 +21,28 @@
       <file leaf-file-name="sign_up_controller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/sign_up_controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="277" column="5" lean-forward="false" selection-start-line="277" selection-start-column="5" selection-end-line="277" selection-end-column="5" />
+            <state relative-caret-position="-592">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users_model.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/models/users_model.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="24" column="8" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_dashboard.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin_dashboard.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1683">
+              <caret line="345" column="41" lean-forward="false" selection-start-line="345" selection-start-column="41" selection-end-line="345" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -32,26 +52,6 @@
         <entry file="file://$PROJECT_DIR$/application/views/lognote_form.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1887">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="single_lognote.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/single_lognote.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2601">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lognote_model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/lognote_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -73,26 +73,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1508">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users_model.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/models/users_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="185" column="5" lean-forward="false" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin_dashboard.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin_dashboard.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="345" column="41" lean-forward="false" selection-start-line="345" selection-start-column="41" selection-end-line="345" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -324,15 +304,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1484369727366</updated>
-      <workItem from="1484369729197" duration="11128000" />
+      <workItem from="1484369729197" duration="14152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11128000" />
+    <option name="totallyTimeSpent" value="14152000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="0" width="1370" height="728" extended-state="0" />
+    <frame x="1" y="0" width="1370" height="728" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17282127" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -437,14 +417,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin_dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="345" column="41" lean-forward="false" selection-start-line="345" selection-start-column="41" selection-end-line="345" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/lognote_controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-408">
@@ -453,18 +425,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin_dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1683">
+          <caret line="345" column="41" lean-forward="false" selection-start-line="345" selection-start-column="41" selection-end-line="345" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/sign_up_controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="277" column="5" lean-forward="false" selection-start-line="277" selection-start-column="5" selection-end-line="277" selection-end-column="5" />
+        <state relative-caret-position="-592">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/users_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="185" column="5" lean-forward="false" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
+        <state relative-caret-position="102">
+          <caret line="24" column="8" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="40" />
           <folding />
         </state>
       </provider>
