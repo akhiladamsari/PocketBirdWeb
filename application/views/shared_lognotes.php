@@ -109,63 +109,64 @@
         <div class="container background-white">
             <div class="row margin-vert-30">
                 <div class="col-md-12">
+                    <h2>Shared Log Notes</h2>
                     <!-- Filter Buttons -->
-                    <form action="<?php echo base_url(); ?>lognote_controller/search_by_shape" method="post">
+                    <form action="<?php echo base_url(); ?>lognote_controller/search" method="post">
                         Search by
                         <select id="shape" name="shape">
                             <option value="shape">Category</option>
-                            <option value="1">Shearwaters,petrers & Ganners</option>
-                            <option value="2">Comorants and Pelicans</option>
-                            <option value="3">Herons, Egrets & Storks</option>
-                            <option value="4">Gees & Ducks</option>
-                            <option value="5">Eagles & Hawks</option>
-                            <option value="6">Quails and Fowls</option>
-                            <option value="7">Rails</option>
-                            <option value="8">Shore Birds</option>
-                            <option value="9">pigeons</option>
-                            <option value="10">Cuckoos</option>
-                            <option value="11">Owls</option>
-                            <option value="12">Swifts</option>
-                            <option value="13">Barbets & woodpeckers</option>
-                            <option value="14">Larks & Pipits</option>
-                            <option value="15">Swallows</option>
-                            <option value="16">Bullbuls & Orioles</option>
-                            <option value="17">Warblers</option>
-                            <option value="18">Thrushers, Babblers</option>
-                            <option value="19">Sunbird & flowerpeakers</option>
-                            <option value="20">Crows</option>
-                            <option value="21">Small Brown Bird</option>
+                            <option value="1"<?php  if ($shape_id == '1') echo ' selected="selected"';?>>Shearwater </option>
+                            <option value="2"<?php  if ($shape_id == '2') echo ' selected="selected"';?>>Cormorant</option>
+                            <option value="3"<?php  if ($shape_id == '3') echo ' selected="selected"';?>>Storks</option>
+                            <option value="4"<?php  if ($shape_id == '4') echo ' selected="selected"';?>>Duck</option>
+                            <option value="5"<?php  if ($shape_id == '5') echo ' selected="selected"';?>>Eagle</option>
+                            <option value="6"<?php  if ($shape_id == '6') echo ' selected="selected"';?>>Quail</option>
+                            <option value="7"<?php  if ($shape_id == '7') echo ' selected="selected"';?>>Rils</option>
+                            <option value="8"<?php  if ($shape_id == '8') echo ' selected="selected"';?>>Shore Birds</option>
+                            <option value="9"<?php  if ($shape_id == '9') echo ' selected="selected"';?>>Piegeons</option>
+                            <option value="10"<?php if ($shape_id == '10') echo ' selected="selected"';?>>Cuckoos</option>
+                            <option value="11"<?php if ($shape_id == '11') echo ' selected="selected"';?>>Owls</option>
+                            <option value="12"<?php if ($shape_id == '12') echo ' selected="selected"';?>>Swifts</option>
+                            <option value="13"<?php if ($shape_id == '13') echo ' selected="selected"';?>>Woodpeckers</option>
+                            <option value="14"<?php if ($shape_id == '14') echo ' selected="selected"';?>>Larks</option>
+                            <option value="15"<?php if ($shape_id == '15') echo ' selected="selected"';?>>Swallows</option>
+                            <option value="16"<?php if ($shape_id == '16') echo ' selected="selected"';?>>Bulbuls</option>
+                            <option value="17"<?php if ($shape_id == '17') echo ' selected="selected"';?>>Warblers</option>
+                            <option value="18"<?php if ($shape_id == '18') echo ' selected="selected"';?>>Babbler</option>
+                            <option value="19"<?php if ($shape_id == '19') echo ' selected="selected"';?>>Sun Birds</option>
+                            <option value="20"<?php if ($shape_id == '20') echo ' selected="selected"';?>>Crows</option>
+                            <option value="21"<?php if ($shape_id == '21') echo ' selected="selected"';?>>Small Brown Bird</option>
                         </select>
                         <select id="province" name="province">
-                            <option value="province">Province</option>
-                            <option value="Central">Central</option>
-                            <option value="Eastern">Eastern</option>
-                            <option value="North Central">North Central</option>
-                            <option value="Northern">Northern</option>
-                            <option value="North Western">North Western</option>
-                            <option value="Sabaragamuwa">Sabaragamuwa</option>
-                            <option value="Uva">Uva</option>
-                            <option value="Western">Western</option>
+                            <option value="province"<?php  if ($province == 'province') echo ' selected="selected"';?>>Province</option>
+                            <option value="Central"<?php  if ($province == 'Central') echo ' selected="selected"';?>>Central</option>
+                            <option value="Eastern"<?php  if ($province == 'Eastern') echo ' selected="selected"';?>>Eastern</option>
+                            <option value="North Central"<?php  if ($province == 'North Central') echo ' selected="selected"';?>>North Central</option>
+                            <option value="Northern"<?php  if ($province == 'Northern') echo ' selected="selected"';?>>Northern</option>
+                            <option value="North Western"<?php  if ($province == 'North Western') echo ' selected="selected"';?>>North Western</option>
+                            <option value="Sabaragamuwa"<?php  if ($province == 'Sabaragamuwa') echo ' selected="selected"';?>>Sabaragamuwa</option>
+                            <option value="Uva"<?php  if ($province == 'Uva') echo ' selected="selected"';?>>Uva</option>
+                            <option value="Western"<?php  if ($province == 'Western') echo ' selected="selected"';?>>Western</option>
 
                         </select>
                         <select id="habitat" name="habitat">
-                            <option value="habitat">Habitat</option>
-                            <option value="Beach">Beach</option>
-                            <option value="Dry Zone Forest">Dry Zone Forest</option>
-                            <option value="Forest">Forest</option>
-                            <option value="Home Garden">Home Garden</option>
-                            <option value="Lake">Lake</option>
-                            <option value="Low Land Rainforest">Low Land Rainforest</option>
-                            <option value="Mountain">Mountain</option>
-                            <option value="Mountain Rainforest">Mountain Rainforest</option>
-                            <option value="River">River</option>
-                            <option value="Riverine Forest">Riverine Forest</option>
-                            <option value="Scurbland">Scurbland</option>
-                            <option value="Tea Field">Tea Field</option>
-                            <option value="Paddy Field">Paddy Field</option>
-                            <option value="Rubber Field">Rubber Field</option>
-                            <option value="Vegitable Field">Vegitable Field</option>
-                            <option value="Other">Other</option>
+                            <option value="habitat"<?php  if ($habitat == '') echo ' selected="selected"';?>>Habitat</option>
+                            <option value="Beach"<?php  if ($habitat == 'Beach') echo ' selected="selected"';?>>Beach</option>
+                            <option value="Dry Zone Forest"<?php  if ($habitat == 'Dry Zone Forest') echo ' selected="selected"';?>>Dry Zone Forest</option>
+                            <option value="Forest"<?php  if ($habitat == 'Forest') echo ' selected="selected"';?>>Forest</option>
+                            <option value="Home Garden"<?php  if ($habitat == 'Home Garden') echo ' selected="selected"';?>>Home Garden</option>
+                            <option value="Lake"<?php  if ($habitat == 'Lake') echo ' selected="selected"';?>>Lake</option>
+                            <option value="Low Land Rainforest"<?php  if ($habitat == 'Low Land Rainforest') echo ' selected="selected"';?>>Low Land Rainforest</option>
+                            <option value="Mountain"<?php  if ($habitat == 'Mountain') echo ' selected="selected"';?>>Mountain</option>
+                            <option value="Mountain Rainforest"<?php  if ($habitat == 'Mountain Rainforest') echo ' selected="selected"';?>>Mountain Rainforest</option>
+                            <option value="River"<?php  if ($habitat == 'River') echo ' selected="selected"';?>>River</option>
+                            <option value="Riverine Forest"<?php  if ($habitat == 'Riverine Forest') echo ' selected="selected"';?>>Riverine Forest</option>
+                            <option value="Scurbland"<?php  if ($habitat == 'Scurbland') echo ' selected="selected"';?>>Scurbland</option>
+                            <option value="Tea Field"<?php  if ($habitat == 'Tea Field') echo ' selected="selected"';?>>Tea Field</option>
+                            <option value="Paddy Field"<?php  if ($habitat == 'Paddy Field') echo ' selected="selected"';?>>Paddy Field</option>
+                            <option value="Rubber Field"<?php  if ($habitat == 'Rubber Field') echo ' selected="selected"';?>>Rubber Field</option>
+                            <option value="Vegitable Field"<?php  if ($habitat == 'Vegitable Field') echo ' selected="selected"';?>>Vegitable Field</option>
+                            <option value="Other"<?php  if ($habitat == 'Other') echo ' selected="selected"';?>>Other</option>
 
 
                         </select>
@@ -207,25 +208,12 @@
             <div class="row">
                 <!-- Footer Menu -->
                 <div id="footermenu" class="col-md-8">
-                    <ul class="list-unstyled list-inline">
-                        <li>
-                            <a href="#" target="_blank">Sample Link</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">Sample Link</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">Sample Link</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">Sample Link</a>
-                        </li>
-                    </ul>
+
                 </div>
                 <!-- End Footer Menu -->
                 <!-- Copyright -->
                 <div id="copyright" class="col-md-4">
-                    <p class="pull-right">(c) 2014 Your Copyright Info</p>
+                    <p class="pull-right">(c)Copyrights by CURATRIX 2016</p>
                 </div>
                 <!-- End Copyright -->
             </div>

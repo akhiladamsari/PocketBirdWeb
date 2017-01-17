@@ -131,7 +131,42 @@ class lognote_controller extends CI_Controller {
         $this->load->view('shared_lognotes',$data);
     }
 
+    public function search(){
+        $habitat = $this->input->post('habitat');
+        $province = $this->input->post('province');
+        $shape_id = $this->input->post('shape');
+        $data['habitat'] = $habitat;
+        $data['province'] = $province;
+        $data['shape_id']= $shape_id;
+        $this->load->model('lognote_model');
 
+        if ($shape_id = "shape" && $province = "province" && $habitat!="habitat"  ){
+            $data['lognote'] = $this->lognote_model->select_by_habitat($habitat);
+
+        }elseif ($shape_id = "shape" && $province != "province" && $habitat="habitat"  ){
+            $data['lognote'] = $this->lognote_model->select_by_province($province);
+
+        }elseif ($shape_id != "shape" && $province = "province" && $habitat="habitat"  ){
+            $data['lognote'] = $this->lognote_model->select_by_shape($shape_id);
+
+        }elseif ($shape_id = "shape" && $province != "province" && $habitat!="habitat"  ){
+            $data['lognote'] = $this->lognote_model->select_by_province_habitat($province,$habitat);
+
+        }elseif ($shape_id != "shape" && $province != "province" && $habitat="habitat"  ){
+            $data['lognote'] = $this->lognote_model->select_by_shape_province($shape_id,$province);
+
+        }elseif ($shape_id != "shape" && $province = "province" && $habitat!="habitat"  ){
+            $data['lognote'] = $this->lognote_model->select_by_shape_habitat($shape_id,$habitat);
+
+        }elseif ($shape_id != "shape" && $province != "province" && $habitat!="habitat"  ){
+            $data['lognote'] = $this->lognote_model->select_by_all($shape_id,$habitat,$province);
+
+        }else{
+
+        }
+
+        $this->load->view('shared_lognotes',$data);
+    }
 
 
 }

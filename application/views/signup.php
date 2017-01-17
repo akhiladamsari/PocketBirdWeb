@@ -170,25 +170,12 @@
             <div class="row">
                 <!-- Footer Menu -->
                 <div id="footermenu" class="col-md-8">
-                    <ul class="list-unstyled list-inline">
-                        <li>
-                            <a href="#" target="_blank">Sample Link</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">Sample Link</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">Sample Link</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">Sample Link</a>
-                        </li>
-                    </ul>
+
                 </div>
                 <!-- End Footer Menu -->
                 <!-- Copyright -->
                 <div id="copyright" class="col-md-4">
-                    <p class="pull-right">(c) 2014 Your Copyright Info</p>
+                    <p class="pull-right">(c)Copyrights by CURATRIX 2016</p>
                 </div>
                 <!-- End Copyright -->
             </div>

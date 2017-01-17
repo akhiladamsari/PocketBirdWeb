@@ -149,20 +149,7 @@
                 <div class="row">
                     <!-- Footer Menu -->
                     <div id="footermenu" class="col-md-8">
-                        <ul class="list-unstyled list-inline">
-                            <li>
-                                <a href="#" target="_blank">Sample Link</a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">Sample Link</a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">Sample Link</a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">Sample Link</a>
-                            </li>
-                        </ul>
+
                     </div>
                     <!-- End Footer Menu -->
                     <!-- Copyright -->

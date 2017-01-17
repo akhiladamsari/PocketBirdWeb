@@ -9,10 +9,6 @@ class page_nav_controller extends CI_Controller {
         $this->load->view('adminlogin');
     }
 
-    public function goto_adminlogin(){
-        $this->load->view('adminlogin');
-    }
-
     public function goto_bird_glossary(){
         $this->load->model('shape_model');
         $lognote['shape'] = $this->shape_model->get_all_shapes();
@@ -23,9 +19,12 @@ class page_nav_controller extends CI_Controller {
         $this->load->view('contact');
     }
     public function goto_gallery(){
+        $data['habitat'] = "habitat";
+        $data['province'] = "province";
+        $data['shape_id']= "shape";
         $this->load->model('image_model');
-        $lognote['image'] = $this->image_model->get_all_images();
-        $this->load->view('gallery',$lognote);
+        $data['image'] = $this->image_model->get_all_images();
+        $this->load->view('gallery',$data);
     }
     public function goto_login(){
         $this->load->view('login');
@@ -51,6 +50,9 @@ class page_nav_controller extends CI_Controller {
         }
     }
     public function goto_shared_lognotes(){
+        $data['habitat'] = "habitat";
+        $data['province'] = "province";
+        $data['shape_id']= "shape";
         $this->load->model('lognote_model');
         $data['lognote']= $this->lognote_model->get_all_lognote();
         $this->load->view('shared_lognotes',$data);

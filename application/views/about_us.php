@@ -111,9 +111,7 @@
                 <div class="col-md-12">
                     <h2 class="margin-bottom-10">About Us</h2>
                     <div class="row margin-bottom-30">
-                            <p>Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus lobortis.</p>
-                            <p>Lorem Ipsum is simply dummy text of Lorem the printing and typesettings. Aliquam dictum nulla eu varius porta. Maecenas congue dui id posuere fermentum. Sed fringilla sem sed massa ullamcorper, vitae rutrum justo sodales.
-                                Cras sed iaculis enim. Sed aliquet viverra nisl a tristique. Curabitur vitae mauris sem.</p>
+                        <p>You'll be wonder who is behind this project Pocket Bird, we are hoping to introduce our team. We are Curatix, second years of University of Colombo School of Computing. We did this project with the coodination of Dr. Sampath S. Senevirathne, Department of Zoology, University of Colombo. Developing team is Kasun, Akila, Sachitha, Ishan, Piumi from different ares of the country helped with experiences of birds with their hometowns. Succes behind us which brings our team together is our shared passion for the conservation of birds with our designing and developing skills.</p>
                         <!-- Person Details -->
 
                     </div>
@@ -121,7 +119,7 @@
                         <figure>
                             <figcaption>
                                 <h3 class="margin-bottom-10">Akhila
-                                    <small>- Programmer</small>
+                                    <small>- Web Developer</small>
                                 </h3>
                                 <span>Sed fringilla sem sed massa ullamcorper, vitae rutrum justo sodales. Cras sed iaculis enim. Sed aliquet viverra nisl a tristique.</span>
                             </figcaption>
@@ -160,8 +158,8 @@
                     <div class="col-md-3 col-sm-3 col-xs-6 person-details margin-bottom-30">
                         <figure>
                             <figcaption>
-                                <h3 class="margin-bottom-10">Simon
-                                    <small>- Sales Assistant</small>
+                                <h3 class="margin-bottom-10">Sachitha
+                                    <small>- Android Developer</small>
                                 </h3>
                                 <span>Sed fringilla sem sed massa ullamcorper, vitae rutrum justo sodales. Cras sed iaculis enim. Sed aliquet viverra nisl a tristique.</span>
                             </figcaption>
@@ -200,8 +198,8 @@
                     <div class="col-md-3 col-sm-3 col-xs-6 person-details margin-bottom-30">
                         <figure>
                             <figcaption>
-                                <h3 class="margin-bottom-10">Jeff
-                                    <small>- Support</small>
+                                <h3 class="margin-bottom-10">Kasun
+                                    <small>- Designer</small>
                                 </h3>
                                 <span>Sed fringilla sem sed massa ullamcorper, vitae rutrum justo sodales. Cras sed iaculis enim. Sed aliquet viverra nisl a tristique.</span>
                             </figcaption>
@@ -236,10 +234,12 @@
                         </figure>
                     </div>
                     <!-- //Portfolio Item// -->
+
+
                     <div class="col-md-3 col-sm-3 col-xs-6 person-details margin-bottom-30">
                         <figure>
                             <figcaption>
-                                <h3 class="margin-bottom-10">April
+                                <h3 class="margin-bottom-10">Ishan
                                     <small>- Programmer</small>
                                 </h3>
                                 <span>Sed fringilla sem sed massa ullamcorper, vitae rutrum justo sodales. Cras sed iaculis enim. Sed aliquet viverra nisl a tristique.</span>
@@ -279,8 +279,8 @@
                     <div class="col-md-3 col-sm-3 col-xs-6 person-details margin-bottom-30">
                         <figure>
                             <figcaption>
-                                <h3 class="margin-bottom-10">Simon
-                                    <small>- Sales Assistant</small>
+                                <h3 class="margin-bottom-10">Gihan
+                                    <small>- Programmer</small>
                                 </h3>
                                 <span>Sed fringilla sem sed massa ullamcorper, vitae rutrum justo sodales. Cras sed iaculis enim. Sed aliquet viverra nisl a tristique.</span>
                             </figcaption>
@@ -319,8 +319,8 @@
                     <div class="col-md-3 col-sm-3 col-xs-6 person-details margin-bottom-30">
                         <figure>
                             <figcaption>
-                                <h3 class="margin-bottom-10">Jeff
-                                    <small>- Support</small>
+                                <h3 class="margin-bottom-10">Piumi
+                                    <small>- <Programmer></Programmer></small>
                                 </h3>
                                 <span>Sed fringilla sem sed massa ullamcorper, vitae rutrum justo sodales. Cras sed iaculis enim. Sed aliquet viverra nisl a tristique.</span>
                             </figcaption>

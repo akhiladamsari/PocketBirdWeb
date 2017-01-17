@@ -95,7 +95,7 @@ h3, h4 {
 }
 
 .navbar-header .navbar-brand span {
-	color: #1B5E20;
+	color: #30a5ff;
 }
 
 /*Buttons*/
@@ -251,7 +251,7 @@ a.bg-primary:hover {
 	background-color: #2E7D32;
 }
 a.bg-success:hover {
-	background-color: #2E7D32;
+	background-color: #e9ecf2;
 }
 .bg-success a {
 	color: rgba(255, 255, 255, .75);

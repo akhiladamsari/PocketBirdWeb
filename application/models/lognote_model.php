@@ -85,5 +85,43 @@ class lognote_model extends CI_Model  {
         $query = $this->db->get_where("log_note_detail",$data);
         return $query->result();
     }
+
+    public function select_by_province_habitat($province,$habitat){
+        $data = array(
+            'province' => $province,
+            'habbitat' => $habitat
+        );
+        $query = $this->db->get_where("log_note_detail",$data);
+        return $query->result();
+    }
+
+    public function select_by_shape_province($shape_id,$province){
+        $data = array(
+            'province' => $province,
+            'shape' => $shape_id
+        );
+        $query = $this->db->get_where("log_note_detail",$data);
+        return $query->result();
+    }
+
+    public function select_by_shape_habitat($shape_id,$habitat){
+        $data = array(
+            'habbitat' => $habitat,
+            'shape' => $shape_id
+        );
+        $query = $this->db->get_where("log_note_detail",$data);
+        return $query->result();
+    }
+
+    public function select_by_all($shape_id,$habitat,$province){
+        $data = array(
+            'habbitat' => $habitat,
+            'shape' => $shape_id,
+            'province' => $province
+        );
+        $query = $this->db->get_where("log_note_detail",$data);
+        return $query->result();
+    }
+
 }
 ?>

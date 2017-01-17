@@ -171,13 +171,12 @@
             <!-- End Main Text -->
             <div class="col-md-6">
                 <h3 class="padding-vert-10">Key Features</h3>
-                <p>When we keep manual recordings the level of service is limited.
-                    Since</p>
+                <p>Main features of the system</p>
 
                 <ul>•	Keep records of birds see in the field.</ul>
                 <ul>•	Keep track of your bird list as images in the gallery.</ul>
                 <ul>•	View the habitat location with a map</ul>
-                <ul>•	Bird Glossary…………………………………………………………</ul>
+                <ul>•	Bird Glossary that provides information about all the categories</ul>
                 <ul>•	Share the log notes for the Pocket Bird community</ul>
                 <ul>•	Conserve the birds and supports birders.</ul>
 
@@ -201,7 +200,7 @@
                         <figure class="animate fadeInLeft">
                             <img alt="image1" src="<?php echo base_url(); ?>img/frontpage/image1.jpg">
                             <figcaption>
-                                <h3>Velit esse molestie</h3>
+                                <h3>Shearwaters,petrers & Ganners</h3>
                             </figcaption>
                         </figure>
                     </a>
@@ -213,7 +212,7 @@
                         <figure class="animate fadeIn">
                             <img alt="image2" src="<?php echo base_url(); ?>img/frontpage/image2.jpg">
                             <figcaption>
-                                <h3>Quam nunc putamus</h3>
+                                <h3>Comorants and Pelicans</h3>
                             </figcaption>
                         </figure>
                     </a>
@@ -225,7 +224,7 @@
                         <figure class="animate fadeInRight">
                             <img alt="image3" src="<?php echo base_url(); ?>img/frontpage/image3.jpg">
                             <figcaption>
-                                <h3>Placerat facer possim</h3>
+                                <h3>Herons, Egrets & Storks</h3>
                             </figcaption>
                         </figure>
                     </a>
@@ -237,7 +236,7 @@
                         <figure class="animate fadeInLeft">
                             <img alt="image4" src="<?php echo base_url(); ?>img/frontpage/image4.jpg">
                             <figcaption>
-                                <h3>Nam liber tempor</h3>
+                                <h3>Gees & Ducksr</h3>
                             </figcaption>
                         </figure>
                     </a>
@@ -249,7 +248,7 @@
                         <figure class="animate fadeIn">
                             <img alt="image5" src="<?php echo base_url(); ?>img/frontpage/image5.jpg">
                             <figcaption>
-                                <h3>Donec non urna</h3>
+                                <h3>Eagles & Hawks</h3>
                             </figcaption>
                         </figure>
                     </a>
@@ -261,7 +260,8 @@
                         <figure class="animate fadeInRight">
                             <img alt="image6" src="<?php echo base_url(); ?>img/frontpage/image6.jpg">
                             <figcaption>
-                                <h3>Nullam consectetur</h3>
+                                <h3>
+                                    Quails and Fowls</h3>
                             </figcaption>
                         </figure>
                     </a>
@@ -279,20 +279,7 @@
         <div class="row">
             <!-- Footer Menu -->
             <div id="footermenu" class="col-md-8">
-                <ul class="list-unstyled list-inline">
-                    <li>
-                        <a href="#" target="_blank">Sample Link</a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">Sample Link</a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">Sample Link</a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">Sample Link</a>
-                    </li>
-                </ul>
+
             </div>
             <!-- End Footer Menu -->
             <!-- Copyright -->
