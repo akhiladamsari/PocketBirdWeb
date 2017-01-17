@@ -9,11 +9,8 @@ class page_nav_controller extends CI_Controller {
         $this->load->view('adminlogin');
     }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4c0845718e0f44e4c32b6d3cc088a600d14743f7
     public function goto_bird_glossary(){
         $this->load->model('shape_model');
         $lognote['shape'] = $this->shape_model->get_all_shapes();
