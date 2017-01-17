@@ -119,7 +119,7 @@
                 <form method="post" action="<?php echo base_url(); ?>map/index">
                     <select style="width: 146px;" id="INS_TYPE" name="INS_TYPE">
                         <option value="allupload"<?php if ($type == 'allupload') echo ' selected="selected"';?>>All Upload</option>
-                        <option value="recentupload"<?php if ($type == 'recentupload') echo ' selected="selected"';?>>Reasently Upload</option>
+                        <option value="recentupload"<?php if ($type == 'recentupload') echo ' selected="selected"';?>>Reacently Upload</option>
                         <option value="myupload"<?php if ($type == 'myupload') echo ' selected="selected"';?>>My Upload</option>
                     </select>
                     <select style="width: 146px;" id="INS_TYPE" name="shape">
@@ -205,7 +205,15 @@
                                 google.maps.event.addListener(marker,'click',function()  {
                                     var infowindow = new google.maps.InfoWindow({
                                       content:desc,
-                                      maxWidth: 200 , maxHeight:200 ,  backgroundColor: "#00152"
+                                      maxWidth: 200 , maxHeight:200 ,
+//                                      shadowStyle: 1,
+//                                      padding: 0,
+//                                      backgroundColor: 'rgb(57,57,57)',
+//                                      borderRadius: 4,
+//                                      arrowSize: 10,
+//                                      borderWidth: 1,
+//                                      borderColor: '#2c2c2c',
+//                                      arrowStyle: 2
                                         
     
                                     });
@@ -214,6 +222,7 @@
                                  google.maps.event.addListener(map, "click", function(event) {
                                     infowindow.close();
                                     }); 
+                                    
                                 });
 
                             }
