@@ -67,9 +67,12 @@ class sign_up_controller extends CI_Controller
         } else {
 
             $this->errordata['message'] = 'Your Username and Password are mismatch or Your account has not activated yet!';
+<<<<<<< HEAD
 
             $this->errordata['message'] = 'Your Username and Password are mismatch!';
 
+=======
+>>>>>>> 4c0845718e0f44e4c32b6d3cc088a600d14743f7
             $this->load->view('login',$this->errordata);
         }
     }
