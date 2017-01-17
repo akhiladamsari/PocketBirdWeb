@@ -10,6 +10,7 @@ class image_model extends CI_Model  {
     }
 
     public function get_all_images(){
+        $this->db->order_by("image_ID", "desc");
         $query = $this->db->get("image");
         return $query->result();
     }
